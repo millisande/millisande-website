@@ -9,7 +9,7 @@ import App from './App';
 
 const history = createBrowserHistory();
 
-const renderApp = (Root) => {
+const renderApp = Root => {
   ReactDOM.render(
     <Router history={history}>
       <Root />

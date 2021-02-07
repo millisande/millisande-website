@@ -10,4 +10,8 @@ export default createGlobalStyle`
     color: #00FF66;
     letter-spacing: 2px;
   }
+
+  button {
+    border-color: #00FF66;
+  }
 `;
