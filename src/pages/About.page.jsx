@@ -8,7 +8,7 @@ const Home = styled('div')`
 
 const render = () => (
   <Home>
-      <h1>Home</h1>
+    <h1>Home</h1>
   </Home>
 );
 
