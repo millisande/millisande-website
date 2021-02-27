@@ -16,3 +16,9 @@ export const Primary = Template.bind({});
 Primary.args = {
   title: 'About Page',
 };
+
+export const Left = Template.bind({});
+Left.args = {
+  title: 'About Page',
+  rotation: 90,
+};

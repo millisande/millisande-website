@@ -26,26 +26,25 @@ export const Primary = Template.bind({});
 Primary.args = {
   title: 'About Page',
   Content: ExampleContent,
-  placement: 'default',
 };
 
 export const Top = Template.bind({});
 Top.args = {
   title: 'About Page',
   Content: ExampleContent,
-  placement: 'top',
+  rotation: 180,
 };
 
 export const Left = Template.bind({});
 Left.args = {
   title: 'About Page',
   Content: ExampleContent,
-  placement: 'left',
+  rotation: 90,
 };
 
 export const Right = Template.bind({});
 Right.args = {
   title: 'About Page',
   Content: ExampleContent,
-  placement: 'right',
+  rotation: 270,
 };

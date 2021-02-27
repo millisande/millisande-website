@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as S from './Main.style';
-import { Avatar, Button, BottomRollout } from '../../components';
+import { Avatar, Button, Rollout } from '../../components';
 import Me from '../../assets/me.jpg';
 
 const Main = () => {
@@ -20,6 +20,8 @@ const Main = () => {
     <div style={{ height: 'calc(100vh - 68px)', width: '800px' }} />
   );
 
+  const SideContent = () => <div style={{ height: '300px', width: '800px' }} />;
+
   return (
     <S.Container>
       <S.Content>
@@ -34,7 +36,8 @@ const Main = () => {
         </Button>
         {showTip && <S.Tip style={{ top: y, left: x }}>Coming soon</S.Tip>}
       </S.Content>
-      <BottomRollout title='Portfolio' Content={Content} />
+      <Rollout title='Portfolio' Content={Content} />
+      <Rollout title='About' Content={SideContent} rotation={90} />
     </S.Container>
   );
 };
