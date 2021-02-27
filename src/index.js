@@ -3,19 +3,17 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Router } from 'react-router-dom';
-import { createBrowserHistory } from 'history';
 import App from './App';
 
-const history = createBrowserHistory();
-
 const renderApp = Root => {
-  ReactDOM.render(
-    <Router history={history}>
-      <Root />
-    </Router>,
-    document.getElementById('root'),
-  );
+  const rootElement = document.getElementById('root');
+  if (rootElement) {
+    ReactDOM.render(<Root />, rootElement);
+  } else {
+    console.log(
+      'Check your public index.js file. Looks like you are missing the indentifier',
+    );
+  }
 };
 
 renderApp(App);

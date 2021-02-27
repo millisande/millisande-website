@@ -3,12 +3,12 @@ import { createGlobalStyle } from 'styled-components';
 export default createGlobalStyle`
   
   @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
   
   body {
-    background-color: black;
-    font-family: VT323, monospace;
-    color: #00FF66;
-    letter-spacing: 2px;
+    background-color: #a6b6cf;
+    font-family: Roboto monospace;
+    margin: 0px;
   }
 
   button {

@@ -1,17 +1,12 @@
 import React from 'react';
 // import { Route, Switch } from 'react-router-dom';
-import { About } from './pages/pages';
 import GlobalStyles from './GlobalStyles';
-import { HeaderBar } from './components';
+import { Main } from './pages';
 
 const App = () => (
   <div>
     <GlobalStyles />
-    <HeaderBar />
-    {/* <Switch>
-      <Route exact path='/' component={Home} />
-    </Switch> */}
-    <About />
+    <Main />
   </div>
 );
 
