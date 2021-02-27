@@ -15,9 +15,9 @@ const BottomRollout = ({ title, Content }) => {
       <S.TabWrapper>
         <Tab title={title} setOpen={setOpen} open={open} />
       </S.TabWrapper>
-      <div ref={wrapperRef}>
+      <S.ContentWrapper ref={wrapperRef} open={open} distance={distance}>
         <Content />
-      </div>
+      </S.ContentWrapper>
     </S.Container>
   );
 };
