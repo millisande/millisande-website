@@ -1,68 +1,65 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Millisande Professional Portfolio
 
-## Available Scripts
+This is a portfolio website for Millisande Bath (author of the repo).
 
-In the project directory, you can run:
+This was originally bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and has subsequently been ejected but retains many of the original features (including commands).
 
-### `npm start`
+## Prequisites 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In run, test and publish this repo you will need the following installed locally to your development device:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Node](https://nodejs.org/en/)
 
-### `npm test`
+## How to run locally
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Get set up
 
-### `npm run build`
+1. Clone the repo using git and navigate to the root level of the directory in a terminal/command line.
+2. Run `npm install` to install required dependencies
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### How to start the server
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+The application uses a simple server to allow for hot reloading of changes to the static files during development mode. To start this run in the root level of the directory
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run start
+```
 
-### `npm run eject`
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. Your terminal will display if there are linting errors preventing the loading of the page.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### How to view the UI elements
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To support development work this repo includes a Storybook application which will show all reusable UI components in a simple web page. To start the storybook server run
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+npm run storybook
+```
 
-## Learn More
+## How to publish changes
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+When you have finished editting the website and are ready to make the changes public you must first run the build command.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm run build
+```
 
-### Code Splitting
+Then you can add, commit and push all the changes to github using the git cli.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Github pages will host the updated pages. 
 
-### Analyzing the Bundle Size
+## Github pages integration advice
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+This repo demonstrates how you can use github pages to host react webpack developed static pages. Key to being able to do that involved making some changes to the originating bootstrapped React create-react-app commands. If you are interested in achieving the same with your own website you should follow these steps:
 
-### Making a Progressive Web App
+1. Generate a react website using the [Create React App](https://github.com/facebook/create-react-app) instructions
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+2. Eject the create-react-app utility libraries so that you can edit the underlying scripts
 
-### Advanced Configuration
+3. In the generated config > path edit line 74 so that it is set to: `appBuild: resolveApp('docs'),`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+4. Make your edits, build the website and push the files you have changed to a github repo. In the repo settings, navigate to the Github pages section, choose to use the main branch and the docs folder as the source of the github pages website. 
 
-### Deployment
+5. If you are interested in using a custom domain you will need to provide a CNAME file with the custom domain name in the docs folder which is generated automatically on build. In order for the CNAME file to be included when the build command is initiated, the file should be added to the public folder of the repo. For more information about custom domains with github pages [this blog article was very helpful](https://medium.com/@JinnaBalu/godaddy-domain-with-github-pages-62aed906d4ef)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
