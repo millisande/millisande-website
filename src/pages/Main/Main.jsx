@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import * as S from './Main.style';
-import { Avatar, Button, Rollout } from '../../components';
+import { Avatar, Button, Rollout, Tile } from '../../components';
 import Me from '../../assets/me.jpg';
+import { data } from './data';
 
 const Main = () => {
   const [showTip, toggleTip] = useState(false);
@@ -17,27 +18,41 @@ const Main = () => {
   };
 
   const Content = () => (
-    <div style={{ height: 'calc(100vh - 68px)', width: '800px' }} />
+    <S.List>
+      {data &&
+        data.map(d => <Tile image={d.image} title={d.title} info={d.info} />)}
+    </S.List>
   );
 
-  const SideContent = () => <div style={{ height: '300px', width: '800px' }} />;
+  const SideContent = () => (
+    <S.About>
+      <S.AboutWrapper>
+        <S.AboutWords>
+          Millisande Bath is a software developer from the London area. She is
+          passionate about creating experiences that delight users.
+        </S.AboutWords>
+        <S.ButtonWrapper>
+          <Button
+            onPress={() => console.log('To be added later')}
+            onMouseLeave={() => mouseLeave()}
+            onMouseMove={e => mouseMove(e)}
+          >
+            View CV
+          </Button>
+        </S.ButtonWrapper>
+        {showTip && <S.Tip style={{ top: y, left: x }}>Coming soon</S.Tip>}
+      </S.AboutWrapper>
+    </S.About>
+  );
 
   return (
     <S.Container>
       <S.Content>
         <Avatar image={Me} />
         <S.Title>Millisande</S.Title>
-        <Button
-          onPress={() => console.log('To be added later')}
-          onMouseLeave={() => mouseLeave()}
-          onMouseMove={e => mouseMove(e)}
-        >
-          View CV
-        </Button>
-        {showTip && <S.Tip style={{ top: y, left: x }}>Coming soon</S.Tip>}
       </S.Content>
       <Rollout title='Portfolio' Content={Content} />
-      <Rollout title='About' Content={SideContent} rotation={90} />
+      <Rollout title='About' Content={SideContent} rotation={90} top='58px' />
     </S.Container>
   );
 };

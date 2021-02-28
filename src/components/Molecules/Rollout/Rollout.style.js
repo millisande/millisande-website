@@ -47,9 +47,12 @@ export const Container = styled('div')`
   position: absolute;
   justify-content: flex-end;
   ${({ rotation }) => setDimensions(rotation)}
+  ${({ top }) => top && `top: ${top};`}
 `;
 
-export const TabWrapper = styled('div')``;
+export const TabWrapper = styled('div')`
+  position: relative;
+`;
 
 export const ContentWrapper = styled('div')`
   ${({ rotation, distance, open }) => setTransition(rotation, distance, open)}

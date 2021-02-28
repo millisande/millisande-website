@@ -36,7 +36,7 @@ export const Container = styled('button')`
   text-align: center;
   border: none;
   outline: none;
-  ${({ rotation }) => setDimensions(rotation)}
+  ${({ rotation }) => setDimensions(rotation)};
 `;
 
 export const TitleWrapper = styled('div')`
