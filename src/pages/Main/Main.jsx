@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import * as S from './Main.style';
-import { Avatar, Button, Rollout, Tile } from '../../components';
+import { Avatar, Button, Rollout, Scrollout, Tile } from '../../components';
 import Me from '../../assets/me.jpg';
 import { data } from './data';
 
@@ -51,7 +51,7 @@ const Main = () => {
         <Avatar image={Me} />
         <S.Title>Millisande</S.Title>
       </S.Content>
-      <Rollout title='Portfolio' Content={Content} />
+      <Scrollout title='Portfolio' Content={Content} />
       <Rollout title='About' Content={SideContent} rotation={90} top='58px' />
     </S.Container>
   );
