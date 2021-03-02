@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled('div')`
   background-color: #edb089;
   border: dashed 5px white;
-  height: 300px;
+  min-height: 300px;
   width: 40%;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ export const Info = styled('p')`
 `;
 
 export const Picture = styled('img')`
-  height: 100%;
+  width: 100%;
 `;
 
 export const PictureWrapper = styled('div')`

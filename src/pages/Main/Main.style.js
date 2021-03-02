@@ -30,13 +30,16 @@ export const Tip = styled('p')`
 
 export const About = styled('div')`
   height: 400px;
-  min-width: 450px;
-  width: 35vh;
+  max-width: 450px;
+  width: 45vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  @media (max-width: 550px) {
+    width: calc(100vw - 58px);
+  }
 `;
 
 export const AboutWrapper = styled('div')`
