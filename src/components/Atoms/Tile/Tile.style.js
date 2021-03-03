@@ -32,10 +32,3 @@ export const Picture = styled('img')`
   width: 100%;
   height: auto;
 `;
-
-export const PictureWrapper = styled('div')`
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-`;
