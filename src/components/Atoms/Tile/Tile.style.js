@@ -30,6 +30,7 @@ export const Info = styled('p')`
 
 export const Picture = styled('img')`
   width: 100%;
+  height: auto;
 `;
 
 export const PictureWrapper = styled('div')`
