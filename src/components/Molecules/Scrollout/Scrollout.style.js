@@ -31,6 +31,11 @@ const setDimensions = rotation => {
   top: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: 767px) {
+    _::-webkit-full-page-media, _:future, :root .safari_only {
+      top: calc(100vh - 124px);
+    }
+}
       `;
 };
 
