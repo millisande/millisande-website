@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.488b967e.chunk.js",
-    "main.js.map": "/static/js/main.488b967e.chunk.js.map",
+    "main.js": "/static/js/main.6e74f183.chunk.js",
+    "main.js.map": "/static/js/main.6e74f183.chunk.js.map",
     "runtime~main.js": "/static/js/runtime~main.41e8fbc6.js",
     "runtime~main.js.map": "/static/js/runtime~main.41e8fbc6.js.map",
     "static/js/2.97147297.chunk.js": "/static/js/2.97147297.chunk.js",
     "static/js/2.97147297.chunk.js.map": "/static/js/2.97147297.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.1708e0714a2386a0005f1ac8e37d535b.js": "/precache-manifest.1708e0714a2386a0005f1ac8e37d535b.js",
+    "precache-manifest.a321cbdd3a36b80adc687e2056b357d9.js": "/precache-manifest.a321cbdd3a36b80adc687e2056b357d9.js",
     "service-worker.js": "/service-worker.js",
     "static/media/bp.png": "/static/media/bp.ccc35802.png",
     "static/media/cognitive.png": "/static/media/cognitive.d06334c4.png",
