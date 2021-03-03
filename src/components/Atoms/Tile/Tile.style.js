@@ -9,6 +9,12 @@ export const Container = styled('div')`
   flex-direction: column;
   padding: 10px;
   margin: 10px;
+  @media (max-width: 300px) {
+    width: 90%;
+  }
+  @media (max-width: 600px) {
+    width: 80%;
+  }
 `;
 
 export const Title = styled('p')`
@@ -27,7 +33,6 @@ export const Picture = styled('img')`
 `;
 
 export const PictureWrapper = styled('div')`
-  height: 50%;
   width: 100%;
   overflow: hidden;
   display: flex;
