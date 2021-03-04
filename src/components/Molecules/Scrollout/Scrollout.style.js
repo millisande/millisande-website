@@ -28,15 +28,10 @@ const setDimensions = rotation => {
   }
   // bottom of the screen
   return `
-  top: calc(100vh - 64px);
+  top: calc(100vh - (env(safe-area-inset-bottom) + 64px));
   display: flex;
   flex-direction: column;
-  @media screen and (max-width: 767px) {
-    _::-webkit-full-page-media, _:future, :root .safari_only {
-      top: calc(100vh - 124px);
-    }
-}
-      `;
+  `;
 };
 
 const setTransition = (rotation, distance, open) => {
