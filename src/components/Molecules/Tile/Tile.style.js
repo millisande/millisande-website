@@ -33,3 +33,8 @@ export const Picture = styled('img')`
   width: 100%;
   height: auto;
 `;
+
+export const TagContainer = styled('div')`
+  display: flex;
+  flex-wrap: wrap;
+`;

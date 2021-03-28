@@ -15,8 +15,4 @@ export default createGlobalStyle`
   background-position: 75% 300px, 40% 20%, 10% 80%;
   background-size: 40px 40px, 21px 21px, 200px 200px;
   }
-
-  button {
-    border-color: #00FF66;
-  }
 `;

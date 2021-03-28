@@ -5,7 +5,7 @@ export const Container = styled('div')`
   justify-content: center;
   align-items: center;
   color: #445464;
-  height: 100vh;
+  height: 91vh;
 `;
 
 export const Content = styled('div')`
@@ -17,15 +17,6 @@ export const Title = styled('p')`
   font-size: 24px;
   font-family: VT323, monospace;
   letter-spacing: 2px;
-`;
-
-export const Tip = styled('p')`
-  font-size: 16px;
-  position: absolute;
-  background-color: #906655;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
 `;
 
 export const About = styled('div')`
@@ -65,10 +56,11 @@ export const List = styled('div')`
 `;
 
 export const AboutWords = styled('p')`
-  padding: 25px;
   text-align: center;
 `;
 
-export const ButtonWrapper = styled('div')`
-  align-self: center;
+export const TagContainer = styled('div')`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0px 10px;
 `;
