@@ -8,7 +8,12 @@ const Tile = ({ title, info, image, tags }) => (
     <S.Title>{title}</S.Title>
     <S.Info>{info}</S.Info>
     <S.TagContainer>
-      {tags && tags.map(tag => <Tag type={tag.type}>{tag.text}</Tag>)}
+      {tags &&
+        tags.map(tag => (
+          <Tag type={tag.type} key={`${title}-${tag.text}`}>
+            {tag.text}
+          </Tag>
+        ))}
     </S.TagContainer>
   </S.Container>
 );

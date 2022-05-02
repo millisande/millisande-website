@@ -4,7 +4,7 @@ export const Container = styled('div')`
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #445464;
+  color: ${props => props.theme.text.primary};
   height: 91vh;
 `;
 
@@ -34,15 +34,15 @@ export const About = styled('div')`
 `;
 
 export const AboutWrapper = styled('div')`
-  border: dashed 5px white;
-  background-color: #edb089;
-  color: white;
+  border: dashed 5px ${props => props.theme.borders.secondary};
+  background-color: ${props => props.theme.background.secondary};
+  color: ${props => props.theme.text.primary};
   width: 80%;
   height: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: #445464;
+  color: ${props => props.theme.text.secondary};
 `;
 
 export const List = styled('div')`

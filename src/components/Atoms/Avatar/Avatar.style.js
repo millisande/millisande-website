@@ -5,7 +5,7 @@ export const Container = styled('div')`
   width: 100px;
   height: 100px;
   overflow: hidden;
-  border: 4px solid white;
+  border: 4px solid ${props => props.theme.borders.primary}};
 `;
 
 export const Picture = styled('img')`

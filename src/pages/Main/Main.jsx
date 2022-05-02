@@ -11,12 +11,18 @@ import {
 import Me from '../../assets/me.jpg';
 import { data, experience } from './data';
 
-const Main = () => {
+const Main = ({ toggleTheme }) => {
   const Content = () => (
     <S.List>
       {data &&
         data.map(d => (
-          <Tile image={d.image} title={d.title} info={d.info} tags={d.tags} />
+          <Tile
+            image={d.image}
+            title={d.title}
+            info={d.info}
+            tags={d.tags}
+            key={d.title}
+          />
         ))}
     </S.List>
   );
@@ -32,7 +38,11 @@ const Main = () => {
         <S.AboutWords>Key skills and experience:</S.AboutWords>
         <S.TagContainer>
           {experience &&
-            experience.map(exp => <Tag type={exp.type}>{exp.text}</Tag>)}
+            experience.map(exp => (
+              <Tag type={exp.type} key={exp.text}>
+                {exp.text}
+              </Tag>
+            ))}
         </S.TagContainer>
       </S.AboutWrapper>
     </S.About>
@@ -40,7 +50,7 @@ const Main = () => {
 
   return (
     <div>
-      <Header />
+      <Header toggleTheme={toggleTheme} />
       <S.Container>
         <S.Content>
           <Avatar image={Me} />

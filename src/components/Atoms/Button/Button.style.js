@@ -4,15 +4,15 @@ export const Button = styled('button')`
   background: none;
   border: solid 1px;
   border-color: ${props => props.theme.button.primary}
-  color: inherit;
+  color: ${props => props.theme.button.primary};
   padding: 5px;
   font-family: inherit;
   letter-spacing: inherit;
   height: 30px;
   min-width: 55px;
   &:hover {
-    color: white;
-    border-color: white;
+    color: ${props => props.theme.button.hover.primary};
+    border-color: ${props => props.theme.button.hover.primary};
   }
 `;
 

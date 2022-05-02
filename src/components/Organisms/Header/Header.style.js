@@ -17,24 +17,24 @@ export const ToggleWrapper = styled('div')`
 
   // resting unchecked
   .react-toggle-track {
-    background-color: purple;
+    background-color: ${props => props.theme.text.primary};
   }
 
   // hover unchecked
-  .custom-classname.react-toggle:hover:not(.react-toggle--disabled)
+  .custom-toggle-class.react-toggle:hover:not(.react-toggle--disabled)
     .react-toggle-track {
-    background-color: blue;
+    background-color: '#171F2C';
   }
 
   // resting checked
-  .custom-classname.react-toggle--checked .react-toggle-track {
-    background-color: red;
+  .custom-toggle-class.react-toggle--checked .react-toggle-track {
+    background-color: ${props => props.theme.text.primary};
   }
 
   // hover unchecked
-  .custom-classname.react-toggle--checked:hover:not(.react-toggle--disabled)
+  .custom-toggle-class.react-toggle--checked:hover:not(.react-toggle--disabled)
     .react-toggle-track {
-    background-color: pink;
+    background-color: #3c4e6d;
   }
 `;
 

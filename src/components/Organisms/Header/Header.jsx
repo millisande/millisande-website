@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Toggle from 'react-toggle';
 import 'react-toggle/style.css';
 import { Button } from '../../Atoms';
-import Invader from '../../Atoms/Icons/Invader';
+import Daisy from '../../../assets/daisy.png';
+import MichaelmasDaisy from '../../../assets/daisy-michaelmas.png';
 import * as S from './Header.style';
 
-const Header = () => {
+const Header = ({ toggleTheme }) => {
   const [showTip, toggleTip] = useState(false);
   const [checked, setChecked] = useState(false);
   const [x, setX] = useState(0);
@@ -23,12 +24,32 @@ const Header = () => {
       <S.ToggleWrapper>
         <Toggle
           defaultChecked={checked}
-          aria-label='No label tag'
-          className='custom-classname'
-          onChange={e => setChecked(e.target.checked)}
+          aria-label={`Theme toggle, click to change to ${
+            checked ? 'light' : 'dark'
+          }`}
+          className='custom-toggle-class'
+          onChange={e => {
+            toggleTheme();
+            setChecked(e.target.checked);
+          }}
+          style={{ backgroundColor: 'red' }}
           icons={{
-            checked: <Invader />,
-            unchecked: null,
+            checked: (
+              <img
+                src={Daisy}
+                alt='Daisy icon to indicate light theme'
+                height='10px'
+                width='auto'
+              />
+            ),
+            unchecked: (
+              <img
+                src={MichaelmasDaisy}
+                alt='Daisy icon to indicate light theme'
+                height='10px'
+                width='auto'
+              />
+            ),
           }}
         />
       </S.ToggleWrapper>

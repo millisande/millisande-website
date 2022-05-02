@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const Container = styled('div')`
-  background-color: #edb089;
-  border: dashed 5px white;
+  background-color: ${props => props.theme.background.secondary};
+  border: dashed 5px ${props => props.theme.borders.secondary};
   min-height: 300px;
   width: 40%;
   display: flex;
@@ -16,6 +16,7 @@ export const Container = styled('div')`
   @media (max-width: 600px) {
     width: 80%;
   }
+  color: ${props => props.theme.text.secondary};
 `;
 
 export const Title = styled('p')`

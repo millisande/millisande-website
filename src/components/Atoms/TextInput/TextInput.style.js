@@ -10,7 +10,7 @@ export const InputContainer = styled('button')`
   font-family: inherit;
   letter-spacing: inherit;
   &:hover {
-    color: white;
+    color: ${props => props.theme.text.color};
   }
 `;
 

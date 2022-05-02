@@ -10,7 +10,7 @@ export const Link = styled('button')`
   font-family: inherit;
   letter-spacing: inherit;
   &:hover {
-    color: white;
+    color: ${props => props.theme.text.primary};
   }
 `;
 
