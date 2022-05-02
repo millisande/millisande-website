@@ -1,15 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9f9e7a4e08cf244cbce832f9731dedba",
+    "revision": "d0cb6b36fb2ee6110925f3de904645b4",
     "url": "/index.html"
   },
   {
-    "revision": "76072857f07772d54072",
-    "url": "/static/js/2.8958420d.chunk.js"
+    "revision": "61d24c9cd895d914acb1",
+    "url": "/static/css/2.ca025b70.chunk.css"
   },
   {
-    "revision": "c807027c4144ed015c8a",
-    "url": "/static/js/main.4ab1f067.chunk.js"
+    "revision": "61d24c9cd895d914acb1",
+    "url": "/static/js/2.5c177fb4.chunk.js"
+  },
+  {
+    "revision": "9bf812a6714eb3f11075",
+    "url": "/static/js/main.9aa42d73.chunk.js"
   },
   {
     "revision": "b56ef9d968377f20b5a5",
@@ -22,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d06334c4372b722593c9ccc9b2c358d2",
     "url": "/static/media/cognitive.d06334c4.png"
+  },
+  {
+    "revision": "33dd5fe88053b641d44757e2fd4ce2d4",
+    "url": "/static/media/daisy-michaelmas.33dd5fe8.png"
   },
   {
     "revision": "9fddd0c4363683acac508dcefe470c0a",
