@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Button = styled('button')`
   background: none;
   border: solid 1px;
-  border-color: ${props => props.theme.button.primary}
+  border-color: ${props => props.theme.button.primary};
   color: ${props => props.theme.button.primary};
   padding: 5px;
   font-family: inherit;
