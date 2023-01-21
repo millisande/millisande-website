@@ -11,20 +11,20 @@ import {
 import Me from '../../assets/me.jpg';
 import { data, experience } from './data';
 
+const reversedData = data.reverse();
+
 const Content = () => (
   <S.List>
-    {data &&
-      data
-        .reverse()
-        .map(d => (
-          <Tile
-            image={d.image}
-            title={d.title}
-            info={d.info}
-            tags={d.tags}
-            key={d.title}
-          />
-        ))}
+    {reversedData &&
+      reversedData.map(d => (
+        <Tile
+          image={d.image}
+          title={d.title}
+          info={d.info}
+          tags={d.tags}
+          key={d.title}
+        />
+      ))}
   </S.List>
 );
 
@@ -57,7 +57,7 @@ const Main = ({ toggleTheme }) => (
         <Avatar image={Me} />
         <S.Title>Millisande</S.Title>
       </S.Content>
-      <Scrollout title='Portfolio' Content={Content} />
+      <Scrollout title='Portfolio' Content={Content} rotation={0} />
       <Rollout title='About' Content={SideContent} rotation={90} top='58px' />
     </S.Container>
   </div>

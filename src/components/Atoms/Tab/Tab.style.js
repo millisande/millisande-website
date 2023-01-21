@@ -23,7 +23,7 @@ const setDimensions = rotation => {
       `;
   }
   return `
-      border-radius: 40px 40px 0px 0px
+      border-radius: 40px 40px 0px 0px;
       height: 58px;
       width: 100%;
       `;
