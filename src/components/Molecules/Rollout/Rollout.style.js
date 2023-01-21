@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const setDimensions = rotation => {
+  console.log('setdimension rotation', rotation);
   if (rotation > 269 && rotation < 360) {
     return `
     width: 100vw;

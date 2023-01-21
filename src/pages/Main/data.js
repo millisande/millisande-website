@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import Studio from '../../assets/studio.png';
 import Knowledge from '../../assets/knowledge.jpg';
 import Chargemaster from '../../assets/bp.png';
