@@ -8,6 +8,7 @@ const dark = {
   background: {
     primary: darkBlue,
     secondary: darkPeach,
+    tertiary: 'rgba(111, 58, 27, 0.5)',
   },
   borders: {
     primary: '#171F2C',

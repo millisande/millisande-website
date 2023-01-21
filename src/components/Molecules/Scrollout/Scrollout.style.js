@@ -60,5 +60,5 @@ export const TabWrapper = styled('div')`
 export const ContentWrapper = styled('div')`
   ${({ rotation, distance, open }) => setTransition(rotation, distance, open)}
   overflow: hidden;
-  background-color: rgba(237, 176, 137, 0.5);
+  background-color: ${props => props.theme.background.tertiary};
 `;

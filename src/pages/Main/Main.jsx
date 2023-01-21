@@ -15,15 +15,17 @@ const Main = ({ toggleTheme }) => {
   const Content = () => (
     <S.List>
       {data &&
-        data.map(d => (
-          <Tile
-            image={d.image}
-            title={d.title}
-            info={d.info}
-            tags={d.tags}
-            key={d.title}
-          />
-        ))}
+        data
+          .reverse()
+          .map(d => (
+            <Tile
+              image={d.image}
+              title={d.title}
+              info={d.info}
+              tags={d.tags}
+              key={d.title}
+            />
+          ))}
     </S.List>
   );
 

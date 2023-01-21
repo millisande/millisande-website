@@ -8,6 +8,7 @@ const light = {
   background: {
     primary: lightBlue,
     secondary: lightPeach,
+    tertiary: 'rgba(237, 176, 137, 0.5)',
   },
   borders: {
     primary: 'white',

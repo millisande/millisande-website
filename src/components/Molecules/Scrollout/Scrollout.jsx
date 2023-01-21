@@ -18,21 +18,18 @@ const Scrollout = ({ title, Content, rotation }) => {
     }
   }, []);
   useEffect(() => {
-    console.log('it has changed');
     if (
       open &&
       containerRef &&
       containerRef.current &&
       containerRef.current.scrollHeight
     ) {
-      console.log(containerRef.current.scrollHeight);
       for (let i = 10; i < 2000; i += 10) {
         setTimeout(() => {
           window.scrollTo(
             window.scrollX,
             window.innerHeight + containerRef.current.scrollHeight,
           );
-          console.log(containerRef.current.scrollHeight);
         }, i);
       }
     }

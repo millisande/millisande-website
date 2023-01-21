@@ -76,7 +76,7 @@ export const data = [
     ],
   },
   {
-    title: 'BP chargemaster',
+    title: 'Car charging application',
     info:
       'Millisande was a senior full stack developer building a React Native application working on key features of a consumer mobile app for managing electric car charging.',
     image: Chargemaster,
