@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar should render 1`] = `
+<div
+  className="sc-bcXHqe dbxvGH"
+>
+  <img
+    className="sc-gswNZR kdyidY"
+    src="me.jpg"
+  />
+</div>
+`;

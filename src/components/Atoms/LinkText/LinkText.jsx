@@ -3,9 +3,9 @@ import * as S from './LinkText.style';
 
 // A simple component that shows the pathname of the current location
 const LinkText = props => {
-  const { children } = props;
+  const { children, onClick } = props;
   return (
-    <S.Link>
+    <S.Link onClick={onClick}>
       <S.Arrow>&gt; </S.Arrow>
       <S.Text>{children}</S.Text>
     </S.Link>
