@@ -12,8 +12,8 @@ const Header = ({ toggleTheme }) => {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
   const mouseMove = event => {
-    setX(event.pageX - 30);
-    setY(event.pageY);
+    setX(event.pageX || 0 - 30);
+    setY(event.pageY || 0);
     toggleTip(true);
   };
   const mouseLeave = () => {
@@ -55,7 +55,7 @@ const Header = ({ toggleTheme }) => {
       </S.ToggleWrapper>
       <S.ButtonWrapper>
         <Button
-          onPress={() => console.log('To be added later')}
+          onClick={() => console.log('To be added later')}
           onMouseLeave={() => mouseLeave()}
           onMouseMove={e => mouseMove(e)}
         >

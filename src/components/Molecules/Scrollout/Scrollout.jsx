@@ -22,7 +22,7 @@ const Scrollout = ({ title, Content, rotation }) => {
       open &&
       containerRef &&
       containerRef.current &&
-      typeof containerRef.current.scrollHeight == 'number'
+      typeof containerRef.current.scrollHeight === 'number'
     ) {
       for (let i = 10; i < 2000; i += 10) {
         setTimeout(() => {
