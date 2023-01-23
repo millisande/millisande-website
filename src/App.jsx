@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
-import { ThemeProvider } from 'styled-components';
+import React from 'react';
 // import { Route, Switch } from 'react-router-dom';
 import GlobalStyles from './GlobalStyles';
+import { SettingsContextProvider } from './context/SettingsContext';
 import { Main } from './pages';
-import { light, dark } from './utils';
 
-const App = () => {
-  const [useDark, setUseDark] = useState(false);
-  return (
-    <ThemeProvider theme={useDark ? dark : light}>
-      <div>
-        <GlobalStyles />
-        <Main toggleTheme={() => setUseDark(!useDark)} />
-      </div>
-    </ThemeProvider>
-  );
-};
+const App = () => (
+  <SettingsContextProvider>
+    <GlobalStyles />
+    <Main />
+  </SettingsContextProvider>
+);
 
 export default App;

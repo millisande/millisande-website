@@ -49,9 +49,9 @@ const SideContent = () => (
   </S.About>
 );
 
-const Main = ({ toggleTheme }) => (
+const Main = () => (
   <div>
-    <Header toggleTheme={toggleTheme} />
+    <Header />
     <S.Container>
       <S.Content>
         <Avatar image={Me} />

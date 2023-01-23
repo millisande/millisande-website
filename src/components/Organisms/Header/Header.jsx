@@ -5,12 +5,14 @@ import { Button } from '../../Atoms';
 import Daisy from '../../../assets/daisy.png';
 import MichaelmasDaisy from '../../../assets/daisy-michaelmas.png';
 import * as S from './Header.style';
+import { useSettingsContext } from '../../../context/SettingsContext';
 
-const Header = ({ toggleTheme }) => {
+const Header = () => {
   const [showTip, toggleTip] = useState(false);
   const [checked, setChecked] = useState(false);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
+  const { toggleTheme } = useSettingsContext();
   const mouseMove = event => {
     setX(event.pageX || 0 - 30);
     setY(event.pageY || 0);
