@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 const setDimensions = rotation => {
-  console.log('setdimension rotation', rotation);
   if (rotation > 269 && rotation < 360) {
     return `
     width: 100vw;
@@ -58,5 +57,5 @@ export const TabWrapper = styled('div')`
 export const ContentWrapper = styled('div')`
   ${({ rotation, distance, open }) => setTransition(rotation, distance, open)}
   overflow: hidden;
-  background-color: rgba(237, 176, 137, 0.5);
+  background-color: ${props => props.theme.background.tertiary};
 `;
