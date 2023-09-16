@@ -1,5 +1,5 @@
 import { render } from '@testing-library/react';
-import App from './App';
+import App from './pages/App';
 
 jest.mock('./GlobalStyles', () => ({
     __esModule: true,
