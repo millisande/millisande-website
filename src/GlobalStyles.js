@@ -14,5 +14,6 @@ export default createGlobalStyle`
     background-repeat: no-repeat;
     background-position: 75% 300px, 40% 20%, 10% 80%;
     background-size: 40px 40px, 21px 21px, 200px 200px;
+    font-size: 14px;
   }
 `;

@@ -1,30 +1,31 @@
 import styled from 'styled-components';
 
-const setDimensions = rotation => {
+const setDimensions = (rotation, open) => {
+  const heightOrWidth = open ? '79px' : '58px';
   if (rotation > 269 && rotation < 360) {
     return `
       border-radius: 40px 0px 0px 40px;
       height: 100%;
-      width: 58px;
+      width: ${heightOrWidth};
       `;
   }
   if (rotation > 179) {
     return `
       border-radius: 0px 0px 40px 40px;
       width: 100%;
-      height: 58px;
+      height: ${heightOrWidth};
       `;
   }
   if (rotation > 89) {
     return `
       border-radius: 0px 40px 40px 0px;
       height: 100%;
-      width: 58px;
+      width: ${heightOrWidth};
       `;
   }
   return `
       border-radius: 40px 40px 0px 0px;
-      height: 58px;
+      height: ${heightOrWidth};
       width: 100%;
       `;
 };
@@ -35,7 +36,7 @@ export const Container = styled('button')`
   text-align: center;
   border: none;
   outline: none;
-  ${({ rotation }) => setDimensions(rotation)};
+  ${({ rotation, open }) => setDimensions(rotation, open)};
 `;
 
 export const TitleWrapper = styled('div')`

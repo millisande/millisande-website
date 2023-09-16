@@ -22,6 +22,7 @@ const light = {
     primary: darkBlue,
     secondary: darkBlue,
     tertiary: 'white',
+    link: '#3C4E6D',
   },
   button: {
     primary: darkBlue,

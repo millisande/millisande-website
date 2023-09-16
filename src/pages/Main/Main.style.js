@@ -1,48 +1,41 @@
 import styled from 'styled-components';
 
+export const Page = styled('div')`
+  width: 100vw;
+  overflow: scroll;
+`;
+
+export const ExpandingPage = styled('div')`
+  width: ${props => (props.sideContent ? 'calc((2*100vw) - 80px)' : '100vw')};
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+`;
+
+export const HeaderWrapper = styled('div')`
+  position: absolute;
+  width: 100vw;
+`;
+
 export const Container = styled('div')`
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-end;
+  width: 100vw;
   color: ${props => props.theme.text.primary};
-  height: 91vh;
+  height: calc(100vh - 50px);
+`;
+
+export const SideContainer = styled('div')`
+  width: calc(100vw - 80px);
+  height: calc(100vh - 50px);
+  overflow: scroll;
 `;
 
 export const Content = styled('div')`
   display: flex;
   flex-direction: column;
-`;
-
-export const Title = styled('p')`
-  font-size: 24px;
-  font-family: VT323, monospace;
-  letter-spacing: 2px;
-`;
-
-export const About = styled('div')`
-  height: 400px;
-  max-width: 450px;
-  width: 45vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  @media (max-width: 550px) {
-    width: calc(100vw - 58px);
-  }
-`;
-
-export const AboutWrapper = styled('div')`
-  border: dashed 5px ${props => props.theme.borders.secondary};
-  background-color: ${props => props.theme.background.secondary};
-  color: ${props => props.theme.text.primary};
-  width: 80%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: ${props => props.theme.text.secondary};
+  flex-grow: 0.5;
+  align-self: center;
 `;
 
 export const List = styled('div')`
@@ -55,12 +48,8 @@ export const List = styled('div')`
   overflow-y: scroll;
 `;
 
-export const AboutWords = styled('p')`
-  text-align: center;
-`;
-
-export const TagContainer = styled('div')`
+export const TabsList = styled('div')`
   display: flex;
-  flex-wrap: wrap;
-  padding: 0px 10px;
+  flex-direction: column;
+  align-items: end;
 `;

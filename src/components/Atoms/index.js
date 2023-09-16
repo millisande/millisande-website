@@ -4,3 +4,5 @@ export { default as TextInput } from './TextInput/TextInput';
 export { default as Avatar } from './Avatar/Avatar';
 export { default as Tab } from './Tab/Tab';
 export { default as Tag } from './Tag/Tag';
+export { default as TabContent } from './TabContent/TabContent';
+export { default as Title } from './Title/Title';
