@@ -1,20 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.db18ff1d.css",
-    "main.js": "/static/js/main.8cc37b22.js",
-    "static/media/studio.png": "/static/media/studio.674837577197067e2a00.png",
+    "main.js": "/static/js/main.1c21c110.js",
+    "static/media/girlswhochange.JPG": "/static/media/girlswhochange.bdce20dc14a16e967b56.JPG",
     "static/media/me.jpg": "/static/media/me.0911a86b90e69c42e1fe.jpg",
-    "static/media/knowledge.jpg": "/static/media/knowledge.e84299961b289449828e.jpg",
-    "static/media/bp.png": "/static/media/bp.ed4b28dcbafb454ad5ae.png",
     "static/media/cognitive.png": "/static/media/cognitive.01be7896aab19d06c4ba.png",
     "static/media/daisy-michaelmas.png": "/static/media/daisy-michaelmas.e0f6c445bd9107e1e27e.png",
     "static/media/daisy.png": "/static/media/daisy.7fa61e9a54ad063a5b1b.png",
     "index.html": "/index.html",
     "main.db18ff1d.css.map": "/static/css/main.db18ff1d.css.map",
-    "main.8cc37b22.js.map": "/static/js/main.8cc37b22.js.map"
+    "main.1c21c110.js.map": "/static/js/main.1c21c110.js.map"
   },
   "entrypoints": [
     "static/css/main.db18ff1d.css",
-    "static/js/main.8cc37b22.js"
+    "static/js/main.1c21c110.js"
   ]
 }
