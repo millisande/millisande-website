@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, createRef } from 'react';
 import * as S from './Main.style';
 import { Avatar, Tab, Header, About, Title, Portfolio } from '../../components';
 import Me from '../../assets/me.jpg';
@@ -16,12 +16,42 @@ const tabs = [
 
 const Main = () => {
   const [content, setContent] = React.useState(false);
+  const [closing, setClosing] = React.useState(false);
+  const containerRef = createRef();
+  useEffect(() => {
+    if (
+      content &&
+      containerRef &&
+      containerRef.current
+      // typeof containerRef.current.scrollHeight === 'number'
+    ) {
+      containerRef.current.children[1]?.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
+  }, [content]);
+
+  useEffect(() => {
+    if (
+      content &&
+      containerRef &&
+      containerRef.current
+      // typeof containerRef.current.scrollHeight === 'number'
+    ) {
+      containerRef.current.children[0]?.scrollIntoView({
+        behavior: 'smooth',
+      });
+      setClosing(false);
+      setTimeout(() => setContent(false), 100);
+    }
+  }, [closing]);
+
   return (
     <S.Page>
       <S.HeaderWrapper>
         <Header />
       </S.HeaderWrapper>
-      <S.ExpandingPage sideContent={!!content}>
+      <S.ExpandingPage sideContent={!!content} ref={containerRef}>
         <S.Container>
           <S.Content>
             <Avatar image={Me} />
@@ -38,7 +68,7 @@ const Main = () => {
                   if (bool) {
                     setContent(t);
                   } else {
-                    setContent(false);
+                    setClosing(true);
                   }
                 }}
               />

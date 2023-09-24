@@ -14,6 +14,7 @@ export const Button = styled('button')`
     color: ${props => props.theme.button.hover.primary};
     border-color: ${props => props.theme.button.hover.primary};
   }
+  margin-right: 10px;
 `;
 
 export const Text = styled('p')`

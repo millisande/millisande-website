@@ -60,11 +60,29 @@ const Header = () => {
           onClick={() => console.log('To be added later')}
           onMouseLeave={() => mouseLeave()}
           onMouseMove={e => mouseMove(e)}
+          aria-disabled
+          aria-describedby='tip'
         >
           View CV
         </Button>
+        <Button
+          onClick={() => window.open('https://github.com/millisande', '_blank')}
+        >
+          View Github
+        </Button>
+        <Button
+          onClick={() =>
+            window.open('https://twitter.com/Millisande', '_blank')
+          }
+        >
+          View Tweets
+        </Button>
       </S.ButtonWrapper>
-      {showTip && <S.Tip style={{ top: y, left: x }}>Coming soon</S.Tip>}
+      {showTip && (
+        <S.Tip id='tip' role='tooltip' style={{ top: y, left: x }}>
+          Coming soon
+        </S.Tip>
+      )}
     </S.Container>
   );
 };

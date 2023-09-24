@@ -37,6 +37,10 @@ export const Container = styled('button')`
   border: none;
   outline: none;
   ${({ rotation, open }) => setDimensions(rotation, open)};
+  color: ${props => props.theme.button.primary};
+  &:hover {
+    color: ${props => props.theme.button.hover.primary};
+  }
 `;
 
 export const TitleWrapper = styled('div')`
@@ -51,7 +55,6 @@ export const TitleWrapper = styled('div')`
 
 export const Title = styled('p')`
   font-size: 20px;
-  color: ${props => props.theme.text.primary};
   font-family: VT323, monospace;
   display: inline;
   padding-right: 20px;
@@ -60,7 +63,6 @@ export const Title = styled('p')`
 export const Arrow = styled('p')`
   font-size: 20px;
   font-weight: 800;
-  color: ${props => props.theme.text.primary};
   font-family: VT323, monospace;
   transform: ${props => `rotate(${props.rotation}deg)`};
   transition: transform ease 1s;

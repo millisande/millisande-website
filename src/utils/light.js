@@ -27,7 +27,7 @@ const light = {
   button: {
     primary: darkBlue,
     hover: {
-      primary: '#171F2C',
+      primary: '#3C4E6D',
     },
   },
   daisy: Daisy,

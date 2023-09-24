@@ -5,11 +5,11 @@ export const Link = styled('a')`
   background: none;
   display: block;
   border: none;
-  color: ${props => props.theme.text.link};
+  color: ${props => props.theme.button.primary};
   font-family: inherit;
   letter-spacing: inherit;
   &:hover {
-    color: ${props => props.theme.text.tertiary};
+    color: ${props => props.theme.button.hover.primary};
   }
 `;
 
