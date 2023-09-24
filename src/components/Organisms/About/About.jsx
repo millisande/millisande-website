@@ -44,7 +44,7 @@ const About = () => (
         <S.TagContainer>
           {experience &&
             experience.map(exp => (
-              <S.TagPadding>
+              <S.TagPadding key={`${exp.text}-tag-padding`}>
                 <Tag type={exp.type} key={exp.text}>
                   {exp.text}
                 </Tag>
@@ -60,9 +60,7 @@ const About = () => (
             src='https://www.youtube.com/embed/LxeCAw4PHDo?si=O7ms-r5NAWkvm3d-'
             title='YouTube video player'
             // eslint-disable-next-line react/no-unknown-property
-            frameborder='0'
             allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-            allowfullscreen
           />
         </S.VideoContainer>
       </S.ContentWrapper>
